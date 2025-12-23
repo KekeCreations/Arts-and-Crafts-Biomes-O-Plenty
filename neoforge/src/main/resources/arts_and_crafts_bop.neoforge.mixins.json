@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kekecreations.arts_and_crafts_biomes_o_plenty.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

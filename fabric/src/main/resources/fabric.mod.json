@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "com.kekecreations.arts_and_crafts_biomes_o_plenty.ArtsAndCraftsBiomesOPlentyFabric"
         ]
     },
     "mixins": [

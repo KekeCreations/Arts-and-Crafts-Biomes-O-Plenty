@@ -10,6 +10,18 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+
+    modImplementation "curse.maven:modmenu-308702:5810603"
+    //dep
+    modImplementation "curse.maven:jinxedlib-1203401:6332453"
+    modImplementation "curse.maven:artsandcrafts-1034791:7368085"
+    modImplementation "curse.maven:biomes-o-plenty-220318:7251967"
+    modImplementation "curse.maven:glitchcore-955399:5660741"
+    implementation("com.electronwill.night-config:toml:${nightconfig_version}")
+    implementation("com.electronwill.night-config:core:${nightconfig_version}")
+    implementation("net.jodah:typetools:0.6.3")
+    modImplementation "curse.maven:terrablender-fabric-565956:6054948"
+    implementation("blue.endless:jankson:${jankson_version}")
 }
 
 loom {
