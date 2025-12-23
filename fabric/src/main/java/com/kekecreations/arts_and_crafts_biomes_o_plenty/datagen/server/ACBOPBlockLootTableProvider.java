@@ -26,6 +26,7 @@ public class ACBOPBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         for (DyeColor colour : DyeColor.values()) {
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedOriginFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedFloweringOakSapling(colour));
         }
     }
 

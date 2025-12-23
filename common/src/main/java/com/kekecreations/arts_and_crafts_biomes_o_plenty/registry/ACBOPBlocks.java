@@ -15,17 +15,25 @@ import java.util.function.Supplier;
 public class ACBOPBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> ORIGIN_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> FLOWERING_OAK_SAPLING_FLOWER_POTS = new HashMap<>();
 
 
     static {
         for (DyeColor colour : DyeColor.values()) {
             ORIGIN_FLOWER_POTS.put(colour, registerBlock(colour + "_potted_origin_sapling",
                     () -> flowerPot(BOPBlocks.ORIGIN_SAPLING, colour)));
+
+            FLOWERING_OAK_SAPLING_FLOWER_POTS.put(colour, registerBlock(colour + "_potted_flowering_oak_sapling",
+                    () -> flowerPot(BOPBlocks.FLOWERING_OAK_SAPLING, colour)));
         }
     }
 
     public static Block getDyedOriginFlowerPot(DyeColor colour) {
         return ORIGIN_FLOWER_POTS.get(colour).get();
+    }
+
+    public static Block getDyedFloweringOakSapling(DyeColor colour) {
+        return FLOWERING_OAK_SAPLING_FLOWER_POTS.get(colour).get();
     }
 
     public static void register() {}

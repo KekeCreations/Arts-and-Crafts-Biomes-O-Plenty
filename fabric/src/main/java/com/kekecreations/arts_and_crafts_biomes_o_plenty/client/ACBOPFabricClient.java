@@ -20,6 +20,7 @@ public class ACBOPFabricClient implements ClientModInitializer {
     public static void registerBlockLayers() {
         for (DyeColor colour : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(ACBOPBlocks.getDyedOriginFlowerPot(colour), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACBOPBlocks.getDyedFloweringOakSapling(colour), RenderType.cutout());
         }
     }
 

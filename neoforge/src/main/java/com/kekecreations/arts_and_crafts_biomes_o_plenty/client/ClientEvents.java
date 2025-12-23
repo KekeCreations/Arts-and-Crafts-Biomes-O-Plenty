@@ -36,6 +36,7 @@ public class ClientEvents {
     public static void clientSetup(FMLClientSetupEvent event) {
         for (DyeColor colour : DyeColor.values()) {
             ItemBlockRenderTypes.setRenderLayer(ACBOPBlocks.getDyedOriginFlowerPot(colour), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ACBOPBlocks.getDyedFloweringOakSapling(colour), RenderType.cutout());
         }
     }
 

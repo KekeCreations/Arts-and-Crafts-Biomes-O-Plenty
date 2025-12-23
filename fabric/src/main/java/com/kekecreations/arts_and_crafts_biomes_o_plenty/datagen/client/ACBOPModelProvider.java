@@ -24,6 +24,7 @@ public class ACBOPModelProvider extends FabricModelProvider {
 
         for (DyeColor colour : DyeColor.values()) {
             this.createFlowerPot("biomesoplenty", ACBOPBlocks.getDyedOriginFlowerPot(colour), "origin_sapling", colour, generator);
+            this.createFlowerPot("biomesoplenty", ACBOPBlocks.getDyedFloweringOakSapling(colour), "flowering_oak_sapling", colour, generator);
         }
 
     }
