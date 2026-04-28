@@ -4,7 +4,8 @@
   "package": "com.kekecreations.arts_and_crafts_biomes_o_plenty.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+  ],
   "client": [
   ],
   "server": [],
