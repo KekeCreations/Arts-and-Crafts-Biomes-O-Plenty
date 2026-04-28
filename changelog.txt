@@ -1,0 +1,4 @@
+
+
+## V1.0.0
+- All saplings and plants now work with Arts & Crafts dyed flower pots!
