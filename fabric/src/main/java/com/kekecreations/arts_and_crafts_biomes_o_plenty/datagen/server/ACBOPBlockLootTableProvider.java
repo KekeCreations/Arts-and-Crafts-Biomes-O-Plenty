@@ -27,6 +27,39 @@ public class ACBOPBlockLootTableProvider extends FabricBlockLootTableProvider {
         for (DyeColor colour : DyeColor.values()) {
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedOriginFlowerPot(colour));
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedFloweringOakSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedCypressFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedSnowblossomFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedRainbowBirchFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedFirFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedPineFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedRedMapleFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedOrangeMapleFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedYellowMapleFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedRedwoodFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedMahoganyFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedJacarandaFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedPalmFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedWillowFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedDeadFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedMagicFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedUmbranFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedHellbarkFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedEmpyrealFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedRoseFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedVioletFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedLavenderFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedWhiteLavenderFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedOrangeCosmosFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedPinkDaffodilFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedPinkHibiscusFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedGlowflowerFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedWiltedLilyFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedBurningBlossomFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedEndbloomFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedSproutFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedTinyCactusFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedToadstoolFlowerPot(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBOPBlocks.getDyedGlowshroomFlowerPot(colour));
         }
     }
 
