@@ -1,4 +1,8 @@
 
+## V1.0.1
+- The mod now marks Arts & Crafts as a dependency and supports the latest version
+- Mod has gone through a rewrite to support fabric and fix any mod loading errors!
+
 
 ## V1.0.0
 - All saplings and plants now work with Arts & Crafts dyed flower pots!
