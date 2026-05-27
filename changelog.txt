@@ -1,6 +1,8 @@
 
 ## V1.0.1
 - The mod now marks Arts & Crafts as a dependency and supports the latest version
+- NeoForge now has an updates.json so people can find updates easier!
+- Updated mod description
 - Mod has gone through a rewrite to support fabric and fix any mod loading errors!
 
 
