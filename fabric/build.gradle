@@ -14,7 +14,7 @@ dependencies {
     modImplementation "curse.maven:modmenu-308702:5810603"
     //dep
     modImplementation "curse.maven:jinxedlib-1203401:6332453"
-    modImplementation "curse.maven:artsandcrafts-1034791:7368085"
+    modImplementation "curse.maven:artsandcrafts-1034791:8041066"
     modImplementation "curse.maven:biomes-o-plenty-220318:7251967"
     modImplementation "curse.maven:glitchcore-955399:5660741"
     implementation("com.electronwill.night-config:toml:${nightconfig_version}")

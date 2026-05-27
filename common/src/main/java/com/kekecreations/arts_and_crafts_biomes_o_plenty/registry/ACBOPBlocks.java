@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts_biomes_o_plenty.registry;
 
 import biomesoplenty.api.block.BOPBlocks;
-import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_biomes_o_plenty.Constants;
+import com.kekecreations.arts_and_crafts_biomes_o_plenty.common.block.ACBOPFlowerPotBlock;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
@@ -306,14 +306,15 @@ public class ACBOPBlocks {
         return GLOWSHROOM_FLOWER_POTS.get(colour).get();
     }
 
-    public static void register() {}
+    public static void register() {
+    }
 
     private static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> blockSupplier) {
         return JinxedRegistryHelper.registerBlock(Constants.MOD_ID, name, false, blockSupplier);
     }
 
-    private static ACFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
+    private static ACBOPFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        return new ACFlowerPotBlock(block, dyeColor, properties);
+        return new ACBOPFlowerPotBlock(block, dyeColor, properties);
     }
 }

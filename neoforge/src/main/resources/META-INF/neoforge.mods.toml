@@ -33,6 +33,7 @@ side = "BOTH"
 modId="arts_and_crafts"
 type="required"
 ordering="AFTER"
+versionRange = "[1.5.4, 1.6)"
 side="BOTH"
 
 [[dependencies.${mod_id}]]

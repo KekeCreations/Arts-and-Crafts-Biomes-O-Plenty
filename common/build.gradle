@@ -25,7 +25,7 @@ dependencies {
 
     //deps
     compileOnly "curse.maven:jinxedlib-1203401:6332450"
-    compileOnly "curse.maven:artsandcrafts-1034791:7368088"
+    compileOnly "curse.maven:artsandcrafts-1034791:8041062"
     compileOnly "curse.maven:biomes-o-plenty-220318:7251965"
     compileOnly "curse.maven:glitchcore-955399:5660740"
     compileOnly "curse.maven:terrablender-neoforge-940057:6054947"

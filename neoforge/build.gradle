@@ -35,7 +35,7 @@ neoForge {
 
 dependencies {
     implementation "curse.maven:jinxedlib-1203401:6332450"
-    implementation "curse.maven:artsandcrafts-1034791:7368088"
+    implementation "curse.maven:artsandcrafts-1034791:8041062"
     implementation "curse.maven:biomes-o-plenty-220318:7251965"
     implementation "curse.maven:glitchcore-955399:5660740"
     implementation "curse.maven:terrablender-neoforge-940057:6054947"
