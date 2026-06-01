@@ -17,6 +17,12 @@ legacyForge {
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+
+    compileOnly("curse.maven:artsandcrafts-1034791:8155599")
+    compileOnly("curse.maven:jinxedlib-1203401:6630668")
+    compileOnly("curse.maven:biomes-o-plenty-220318:6364065")
+    compileOnly("curse.maven:glitchcore-955399:5787839")
+    compileOnly("curse.maven:terrablender-563928:6290448")
 }
 
 configurations {

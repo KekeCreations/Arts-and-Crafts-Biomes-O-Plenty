@@ -12,6 +12,18 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
+
+    modImplementation "curse.maven:artsandcrafts-1034791:8155595"
+    modImplementation "curse.maven:jinxedlib-1203401:6627520"
+    modImplementation "curse.maven:biomes-o-plenty-220318:6364066"
+    modImplementation "curse.maven:glitchcore-955399:5787838"
+    modImplementation "curse.maven:terrablender-fabric-565956:6290449"
+    modImplementation("com.electronwill.night-config:toml:${nightconfig_version}")
+    modImplementation("com.electronwill.night-config:core:${nightconfig_version}")
+    modImplementation("net.jodah:typetools:0.6.3")
+    implementation("blue.endless:jankson:${jankson_version}")
+
+    modImplementation "curse.maven:modmenu-308702:5162837"
 }
 
 loom {
