@@ -1,40 +1,25 @@
 {
     "schemaVersion": 1,
-    "id": "${mod_id}",
+    "id": "arts_and_crafts_bop",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
         "${mod_author}"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
     "license": "${license}",
     "icon": "${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.kekecreations.arts_and_crafts_biomes_o_plenty.ArtsAndCraftsBiomesOPlentyFabric"
-        ],
-        "client": [
-            "com.kekecreations.arts_and_crafts_biomes_o_plenty.client.ACBOPFabricClient"
-        ],
-        "fabric-datagen": [
-            "com.kekecreations.arts_and_crafts_biomes_o_plenty.datagen.ACBOPDataGenerator"
+            "com.kekecreations.arts_and_crafts_biomes_o_plenty.FabricArtsAndCraftsBiomesOPlenty"
         ]
     },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
     "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
+        "fabricloader": ">=0.14",
+        "fabric": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}",
-        "arts_and_crafts": ">=1.5.4"
+        "java": ">=17"
     },
     "suggests": {
         "another-mod": "*"
