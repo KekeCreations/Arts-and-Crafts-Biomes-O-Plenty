@@ -25,7 +25,8 @@
         "fabricloader": ">=0.14",
         "fabric": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=17"
+        "java": ">=17",
+        "arts_and_crafts": ">=1.5.4"
     },
     "suggests": {
         "another-mod": "*"

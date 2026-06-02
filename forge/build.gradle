@@ -1,59 +1,85 @@
 plugins {
+    id 'idea'
+    id 'maven-publish'
     id 'multiloader-loader'
-    id 'net.neoforged.moddev.legacyforge'
+    id 'net.minecraftforge.gradle'
+    id 'org.spongepowered.mixin'
+}
+base {
+    archivesName = "${mod_name}-forge-${minecraft_version}"
 }
 
-legacyForge {
-    version = "${minecraft_version}-${forge_version}"
 
-    validateAccessTransformers = true
+minecraft {
+    mappings channel: 'official', version: minecraft_version
 
-    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
-    if (at.exists()) {
-        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+    copyIdeResources = true //Calls processResources when in dev
+
+    // Automatically enable forge AccessTransformers if the file exists
+    // This location is hardcoded in Forge and can not be changed.
+    // https://github.com/MinecraftForge/MinecraftForge/blob/be1698bb1554f9c8fa2f58e32b9ab70bc4385e60/fmlloader/src/main/java/net/minecraftforge/fml/loading/moddiscovery/ModFile.java#L123
+    if (file('src/main/resources/META-INF/accesstransformer.cfg').exists()) {
+        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     }
-    parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
-    }
+
     runs {
         client {
-            client()
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Client'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modClientRun {
+                    source sourceSets.main
+                    source project(":common").sourceSets.main
+                }
+            }
         }
-        server {
-            server()
-        }
-    }
 
-    mods {
-        "${mod_id}" {
-            sourceSet sourceSets.main
+        server {
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Server'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modServerRun {
+                    source sourceSets.main
+                    source project(":common").sourceSets.main
+                }
+            }
         }
     }
 }
 
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+
+tasks.withType(JavaCompile).configureEach {
+    source(project(":common").sourceSets.main.allSource)
+}
+tasks.withType(Javadoc).configureEach {
+    source(project(":common").sourceSets.main.allJava)
+}
 
 processResources {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(":common").sourceSets.main.resources
 }
 
-//sourceSets.main.resources.srcDir 'src/generated/resources'
+jar.finalizedBy('reobfJar')
+
 
 dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":common")
-    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation "curse.maven:artsandcrafts-1034791:8155599"
-    implementation "curse.maven:jinxedlib-1203401:6630668"
-    implementation "curse.maven:biomes-o-plenty-220318:6364065"
-    implementation ("curse.maven:glitchcore-955399:5772820")
-    implementation "curse.maven:terrablender-563928:6290448"
+    implementation fg.deobf("curse.maven:artsandcrafts-1034791:8155599")
+    implementation fg.deobf("curse.maven:jinxedlib-1203401:6630668")
+    implementation fg.deobf("curse.maven:biomes-o-plenty-220318:6364065")
+    implementation fg.deobf("curse.maven:glitchcore-955399:5772820")
+    implementation fg.deobf("curse.maven:terrablender-563928:6290448")
 }
 
-jar {
-    finalizedBy('reobfJar')
-    manifest.attributes([
-            "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
-    ])
-}
