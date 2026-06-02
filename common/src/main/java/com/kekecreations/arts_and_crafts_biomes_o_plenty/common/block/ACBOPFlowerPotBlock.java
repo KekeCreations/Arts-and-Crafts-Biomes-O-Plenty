@@ -9,6 +9,7 @@ import java.util.HashMap;
 import com.kekecreations.arts_and_crafts_biomes_o_plenty.registry.ACBOPBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.flag.FeatureFlagSet;
@@ -56,7 +57,8 @@ public class ACBOPFlowerPotBlock extends Block {
     }
 
 
-    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+    @Override
+    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
         if (this.content == null) {
             for (DyeColor colour : DyeColor.values()) {
                 if (this == ACBOPBlocks.getDyedOriginFlowerPot(colour)) {
@@ -235,9 +237,6 @@ public class ACBOPFlowerPotBlock extends Block {
         return this.content;
     }
 
-    public boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
-        return false;
-    }
 
     static {
         for(DyeColor colour : DyeColor.values()) {

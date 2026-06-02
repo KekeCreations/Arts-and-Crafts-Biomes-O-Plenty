@@ -13,6 +13,12 @@
     "entrypoints": {
         "main": [
             "com.kekecreations.arts_and_crafts_biomes_o_plenty.FabricArtsAndCraftsBiomesOPlenty"
+        ],
+        "client": [
+            "com.kekecreations.arts_and_crafts_biomes_o_plenty.client.ACBOPFabricClient"
+        ],
+        "fabric-datagen": [
+            "com.kekecreations.arts_and_crafts_biomes_o_plenty.datagen.ACBOPDataGenerator"
         ]
     },
     "depends": {

@@ -20,10 +20,6 @@ legacyForge {
         client {
             client()
         }
-        data {
-            data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-        }
         server {
             server()
         }
@@ -36,7 +32,13 @@ legacyForge {
     }
 }
 
-sourceSets.main.resources.srcDir 'src/generated/resources'
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from project(":common").sourceSets.main.resources
+}
+
+//sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
     compileOnly project(":common")
@@ -45,7 +47,7 @@ dependencies {
     implementation "curse.maven:artsandcrafts-1034791:8155599"
     implementation "curse.maven:jinxedlib-1203401:6630668"
     implementation "curse.maven:biomes-o-plenty-220318:6364065"
-    implementation "curse.maven:glitchcore-955399:5787839"
+    implementation ("curse.maven:glitchcore-955399:5772820")
     implementation "curse.maven:terrablender-563928:6290448"
 }
 
