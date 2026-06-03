@@ -1,3 +1,7 @@
+## V1.0.2
+- Fixed pick block crashing the game
+- Fixed lang entries for the flower pots for mods like Jade
+
 
 ## V1.0.1
 - Backported all features from V1.0.1 on 1.21.1 on Neoforge & Fabric!
