@@ -1,3 +1,5 @@
+## V1.0.2
+- Fixed pick block crashing the game!
 
 ## V1.0.1
 - The mod now marks Arts & Crafts as a dependency and supports the latest version

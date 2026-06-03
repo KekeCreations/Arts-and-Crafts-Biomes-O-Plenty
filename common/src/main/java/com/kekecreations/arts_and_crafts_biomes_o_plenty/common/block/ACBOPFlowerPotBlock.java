@@ -227,7 +227,7 @@ public class ACBOPFlowerPotBlock extends Block {
     }
 
     public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        return this.isEmpty() ? super.getCloneItemStack(levelReader, blockPos, blockState) : new ItemStack(this.content);
+        return ACBlocks.getDyedFlowerPot(colour.getId()).asItem().getDefaultInstance();
     }
 
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
